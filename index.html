@@ -150,46 +150,50 @@
     </section>
 
     <!-- "meet the trainers" section -->
-    <!-- Wrap every h2 with a class of "section-title" in this div! -->
-    <section id="your-trainers" class="trainers">
+    <!-- Wrap every h2 with a div flex-row!  -->
+    <section id="your-trainers">
         <div class="flex-row">
         <h2 class="section-title primary-border">
             Meet The Trainers
         </h2>
         </div>
-        <!-- first trainer bio -->
-        <article class="trainer">
+        <!-- create a flexbox container around these three <article> elements and wrap them with <div> -->
+      <div class="trainers">
+          <!-- first trainer bio -->
+          <article class="trainer">
             <img src="./assets/images/trainer-1.jpg" alt="Arron Stephens in his workout clothes, ready to pump iron" />
-            <div class="trainer-bio text-left">
-                <h3>Arron Stephens</h3>
-                <h4>Speed / Strength</h4>
+            <div class="trainer-bio">
+                <h3 class="trainer-name">Arron Stephens</h3>
+                <h4 class="trainer-role">Speed / Strength</h4>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem molestias porro reiciendis, facilis nemo soluta totam temporibus non eaque consequuntur autem suscipit maxime in laboriosam! Veritatis unde deserunt inventore ipsum?
                 </p>
             </div>
-        </article>
-        <!-- sescond trainer bio -->
-        <article class="trainer">
-            <div class="trainer-bio text-right">
-                <h3>Joanna Gill</h3>
-                <h4>Endurance</h4>
+          </article>
+          <!-- sescond trainer bio -->
+          <article class="trainer">
+            <img src="./assets/images/trainer-2.jpg" alt="Joanna Gill cooling off after a workout" />
+            <div class="trainer-bio">
+                <h3 class="trainer-name">Joanna Gill</h3>
+                <h4 class="trainer-role">Endurance</h4>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, vero molestias, aliquam at quaerat porro est vel quidem veniam cupiditate ut mollitia quo debitis dicta voluptas earum esse. Et, repudiandae?
                 </p>
             </div>
-            <img src="./assets/images/trainer-2.jpg" alt="Joanna Gill cooling off after a workout" />
-        </article>
-        <!-- third trainer-bio -->
-        <article class="trainer">
+          </article>
+          <!-- third trainer-bio -->
+          <article class="trainer">
             <img src="./assets/images/trainer-3.jpg" alt="Harry Smith wearing a headband and lifting comically small pink weights" />
-            <div class="trainer-bio text-left">
-                <h3>Harry " the Headband" Smith</h3>
-                <h4>Strength</h4>
+            <div class="trainer-bio">
+                <h3 class="trainer-name">Harry " the Headband" Smith</h3>
+                <h4 class="trainer-role">Strength</h4>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat consequuntur, non, facilis corporis nihil impedit perspiciatis vitae reiciendis voluptates consectetur odio repellat aspernatur ut animi sed. Impedit, architecto aut.
                 </p>
             </div>
-        </article>
+          </article>
+      </div>
+
     </section>
 
     <!-- "reach out" section -->
