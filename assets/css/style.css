@@ -10,13 +10,21 @@ body {
     font-family:Helvetica, Arial, sans-serif;
 }
 
-
+/* add background properties from hero to header */
 header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; 
     padding: 20px 35px;
     background-color: #39a6b2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");  
+    background-size: cover;
+    background-origin: center; 
+    background-attachment: fixed;
+    background-position: 80% ;
 }
 
 
@@ -25,6 +33,10 @@ header h1 {
     font-size: 36 px;
     color: #fce138;
     margin: 0;
+}
+/* add text-shadow property */
+header h1 {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
@@ -49,6 +61,11 @@ header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw; 
+}
+
+/* add text-shadow property */
+header nav ul li a {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 footer {
@@ -88,17 +105,20 @@ section {
     background-size: cover;
     background-origin: center;   
     align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
-
+/* add box-shadow and add transparency to background color */
 .hero-form {
     border: 3px solid #024e76;
-    background-color: #fce138;
+    background-color: rgba(252, 225, 56, .80);
     padding: 20px;
     color:#024e76;
     width: 40%;
     margin: 3.5px;
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -110,6 +130,7 @@ section {
     margin: 5px 0 15px 0;
 }
 
+/* add rounded corners */
 .form-input {
     border: 1px solid #024e76;
     display: block;
@@ -118,6 +139,7 @@ section {
     color: #024e76;
     width: 100%;
     margin-bottom :15px;
+    border-radius: 10px;
 }
 
 .hero-form label {
@@ -130,7 +152,14 @@ section {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
 }
+
+ /*add some hover effects to the buttons */
+ .hero-form button:hover{
+     background-color: #39a6b2;
+ }
+
 /* change the line-height */
 .hero-cta {
     width: 35%;
@@ -147,6 +176,10 @@ section {
     color: #fce138;
 }
 
+/* add text-shadow property */
+.hero-cta h2 {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
 .intro p {
     line-height: 1.7;
@@ -222,12 +255,11 @@ section {
     color: #024e76;
 }
 
-
+/* move "border-bottom" declaration to ".step:last-child*/
 .step {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -334,6 +366,7 @@ section {
     width: 100%;
     margin-bottom: 15px;  
     margin-top: 5px;
+    border-radius: 10px;
 }
 
 .contact-form button {
@@ -344,6 +377,13 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+ /*add some hover effects to buttons */
+.contact-form button:hover{
+    color: #fce138;
+    background: #39a6b2;
 }
 
 /* edit the 980px media query */
@@ -352,6 +392,7 @@ section {
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
     }
 
      header h1 { 
@@ -457,3 +498,33 @@ section {
     
 }
     
+/*add some hover effects to the links */
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+/* update existing rule with this declaration */
+.form-input {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+/* create a new rule for focus state */
+.form-input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
+}
+/* add transparent background */
+.contact-form input, .contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.75); 
+}
+/* create a new css rule for focus state */
+.contact-form input:focus, .contact-form textarea:focus{
+    background-color: rgba(255, 255, 255, 1);
+    outline: none; 
+}
+/* add a border to every step except the last one*/
+.step:not(:last-child) {
+    border-bottom: 1px solid #39a6b2;
+}
